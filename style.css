@@ -1133,3 +1133,88 @@ transform:translateX(-8px);
 background:#193a5b;
 
 }
+.featured-projects{
+
+padding:120px 0;
+
+background:#081421;
+
+}
+
+.project-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+.project-card{
+
+background:#10263d;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.4);
+
+}
+
+.project-image{
+
+height:220px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:90px;
+
+background:linear-gradient(135deg,#ff9800,#ffb300);
+
+}
+
+.project-card h3{
+
+padding:25px 25px 10px;
+
+font-size:28px;
+
+}
+
+.project-card p{
+
+padding:0 25px;
+
+line-height:2;
+
+}
+
+.project-card span{
+
+display:inline-block;
+
+margin:25px;
+
+padding:10px 20px;
+
+background:#ff9800;
+
+border-radius:50px;
+
+font-weight:bold;
+
+}
