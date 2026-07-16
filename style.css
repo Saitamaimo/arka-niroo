@@ -1086,3 +1086,50 @@ font-size:18px;
 line-height:2;
 
 }
+/* Capabilities */
+
+.capabilities{
+
+padding:120px 0;
+
+background:#071421;
+
+}
+
+.capability-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.capability-item{
+
+background:#122b43;
+
+padding:28px;
+
+border-radius:16px;
+
+font-size:20px;
+
+font-weight:600;
+
+transition:.35s;
+
+border-right:5px solid #ff9800;
+
+}
+
+.capability-item:hover{
+
+transform:translateX(-8px);
+
+background:#193a5b;
+
+}
