@@ -561,27 +561,9 @@ ARKA AI ASSISTANT V2
 ===================== */
 
 
-function toggleChat(){
 
-const box=document.getElementById("chatBox");
 
-if(box.style.display==="block"){
 
-box.style.display="none";
-
-}
-
-else{
-
-box.style.display="block";
-    if(!box.dataset.opened){
-
-addMessage(
-"🤖 ARKA AI:",
-"سلام 👋 من دستیار هوشمند آرکا نیرو هستم. درباره خدمات خط گرم، شبکه برق، تجهیزات، پروژه‌ها و همکاری سؤال کنید."
-);
-
-box.dataset.opened="true";
 
     }
 
@@ -595,28 +577,38 @@ box.dataset.opened="true";
 
 function addMessage(sender,text){
 
-
-const body=document.getElementById("chatBody");
-
-
-body.innerHTML += `
-
-<div style="margin:12px 0">
-
-<b>${sender}</b>
-
-<br>
-
-<span>${text}</span>
-
-</div>
-
-`;
+// =====================
+// ARKA AI ENGINE
+// =====================
 
 
+const chatButton=document.getElementById("chatButton");
 
-body.scrollTop=body.scrollHeight;
+const chatBox=document.getElementById("chatBox");
 
+const closeChat=document.getElementById("closeChat");
+
+const sendBtn=document.getElementById("sendBtn");
+
+const input=document.getElementById("userInput");
+
+const chatBody=document.getElementById("chatBody");
+
+
+
+
+
+chatButton.onclick=function(){
+
+chatBox.style.display="block";
+
+}
+
+
+
+closeChat.onclick=function(){
+
+chatBox.style.display="none";
 
 }
 
@@ -624,95 +616,44 @@ body.scrollTop=body.scrollHeight;
 
 
 
-function botReply(message){
+
+function answer(msg){
 
 
-let text=message.toLowerCase();
+let m=msg.toLowerCase();
 
 
-let answer="";
+let reply="";
 
 
 
-if(text.includes("خط") || text.includes("hotline")){
+if(m.includes("خط")){
 
-
-answer=
-
-"آرکا نیرو در زمینه عملیات خط گرم، تعمیرات و نگهداری شبکه‌های توزیع بدون خاموشی فعالیت می‌کند. تجهیزات عایقی، هات‌استیک و روش‌های ایمن عملیاتی استفاده می‌شوند.";
-
+reply="آرکا نیرو در زمینه عملیات خط گرم، تعمیرات شبکه بدون خاموشی و نگهداری خطوط توزیع فعالیت می‌کند.";
 
 }
 
 
 
-else if(text.includes("تجهیز") || text.includes("ابزار")){
+else if(m.includes("خدمات")){
 
-
-answer=
-
-"تجهیزات تخصصی شامل ابزار خط گرم، تجهیزات حفاظت فردی، خودروهای عملیاتی، بالابر، تجهیزات تست و ابزارهای کنترل شبکه است.";
-
+reply="خدمات آرکا نیرو شامل خط گرم، شبکه توزیع، پست برق، انرژی پاک و مدیریت پروژه است.";
 
 }
 
 
 
-else if(text.includes("هوش") || text.includes("ai")){
+else if(m.includes("تجهیز")){
 
-
-answer=
-
-"ARKA AI برای تحلیل اطلاعات پروژه، مدیریت ریسک، گزارش‌گیری هوشمند و توسعه شبکه‌های برق هوشمند استفاده می‌شود.";
-
+reply="تجهیزات شامل هات‌استیک، ابزار عایقی، تجهیزات ایمنی، خودرو بالابر و تجهیزات تست می‌باشد.";
 
 }
 
 
 
-else if(text.includes("شبکه") || text.includes("توزیع")){
+else if(m.includes("همکار")){
 
-
-answer=
-
-"خدمات شبکه شامل احداث، توسعه، اصلاح و نگهداری شبکه‌های فشار متوسط و فشار ضعیف می‌باشد.";
-
-
-}
-
-
-
-else if(text.includes("پست")){
-
-
-answer=
-
-"آرکا نیرو در طراحی، اجرا و توسعه پست‌های برق و زیرساخت‌های انرژی فعالیت دارد.";
-
-
-}
-
-
-
-else if(text.includes("گواهی") || text.includes("مدرک")){
-
-
-answer=
-
-"بخش Certification Center شامل گواهینامه‌ها، صلاحیت‌های تخصصی و استانداردهای شرکت خواهد بود.";
-
-
-}
-
-
-
-else if(text.includes("همکار") || text.includes("تماس")){
-
-
-answer=
-
-"برای شروع همکاری از بخش تماس سایت درخواست خود را ثبت کنید. تیم آرکا نیرو در سریع‌ترین زمان پاسخ خواهد داد.";
-
+reply="برای همکاری با آرکا نیرو از بخش تماس سایت درخواست خود را ارسال کنید.";
 
 }
 
@@ -720,31 +661,23 @@ answer=
 
 else{
 
-
-answer=
-
-"سؤال شما ثبت شد. لطفاً درباره خدمات برق قدرت، خط گرم، تجهیزات یا فناوری‌های آرکا نیرو سؤال کنید.";
-
+reply="لطفاً درباره خدمات، خط گرم، تجهیزات یا پروژه‌های آرکا نیرو سؤال کنید.";
 
 }
 
 
 
+chatBody.innerHTML +=
 
-setTimeout(()=>{
+`
+<p><b>شما:</b> ${msg}</p>
 
-
-addMessage(
-
-"🤖 ARKA AI:",
-
-answer
-
-);
+<p><b>ARKA AI:</b> ${reply}</p>
+`;
 
 
-},700);
 
+chatBody.scrollTop=chatBody.scrollHeight;
 
 
 }
@@ -753,44 +686,44 @@ answer
 
 
 
+function quick(text){
 
-function sendMessage(){
+answer(text);
 
-
-const input=document.getElementById("userInput");
-
-
-let msg=input.value.trim();
+}
 
 
 
-if(msg==="") return;
 
+sendBtn.onclick=function(){
 
+if(input.value.trim()){
 
-addMessage(
-
-"👤 شما:",
-
-msg
-
-);
-
-
+answer(input.value);
 
 input.value="";
 
+}
+
+}
 
 
-botReply(msg);
 
-    document
-.getElementById("userInput")
-.addEventListener("keypress",function(e){
+
+input.addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
 
-sendMessage();
+sendBtn.click();
+
+}
+
+});
+
+}
+
+
+
 
 }
 
