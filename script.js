@@ -468,6 +468,98 @@ if(year){
 year.innerHTML=
 
 "© "+new Date().getFullYear()+" ARKA NIROO - All Rights Reserved";
+    /* =====================
+ARKA CHATBOT
+===================== */
+
+
+function toggleChat(){
+
+let box=document.getElementById("chatBox");
+
+if(box.style.display==="block"){
+
+box.style.display="none";
+
+}
+
+else{
+
+box.style.display="block";
+
+}
+
+}
+
+
+
+
+
+function sendQuestion(q){
+
+
+let body=document.getElementById("chatBody");
+
+
+let answer="";
+
+
+if(q.includes("خط گرم")){
+
+answer="آرکا نیرو خدمات عملیات خط گرم، تعمیرات شبکه بدون خاموشی و نگهداری خطوط توزیع را ارائه می‌دهد.";
+
+}
+
+
+else if(q.includes("تجهیزات")){
+
+answer="تجهیزات تخصصی شامل ابزارهای خط گرم، تجهیزات عایقی، خودروهای عملیاتی و تجهیزات تست می‌باشد.";
+
+}
+
+
+else if(q.includes("همکاری")){
+
+answer="برای شروع همکاری می‌توانید از بخش تماس با آرکا نیرو درخواست خود را ارسال کنید.";
+
+}
+
+
+else if(q.includes("گواهینامه")){
+
+answer="بخش گواهینامه‌ها شامل مدارک صلاحیت، استانداردها و تاییدیه‌های تخصصی شرکت خواهد بود.";
+
+}
+
+
+
+body.innerHTML +=
+
+"<p><b>شما:</b> "+q+"</p>"+
+
+"<p><b>ARKA AI:</b> "+answer+"</p>";
+
+
+
+}
+
+
+
+
+function sendMessage(){
+
+let input=document.getElementById("userInput");
+
+
+if(input.value.trim()!=""){
+
+sendQuestion(input.value);
+
+input.value="";
+
+}
+
+}
 
 
 }
