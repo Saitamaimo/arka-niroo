@@ -11,6 +11,7 @@ body{
 }
 
 header{
+    <link rel="stylesheet" href="style.css">
     display:flex;
     justify-content:space-between;
     align-items:center;
