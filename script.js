@@ -316,6 +316,161 @@ card.style.transform="translateY(0) scale(1)";
 });
 
 });
+/* ===================================
+ARKA NIROO
+JavaScript Version 1.0
+=================================== */
+
+
+/* MOBILE MENU */
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+const menu = document.querySelector(".menu");
+
+
+if(menuToggle){
+
+menuToggle.addEventListener("click",()=>{
+
+menu.classList.toggle("active");
+
+});
+
+}
+
+
+
+/* CLOSE MENU AFTER CLICK */
+
+
+document.querySelectorAll(".menu a").forEach(link=>{
+
+
+link.addEventListener("click",()=>{
+
+
+menu.classList.remove("active");
+
+
+});
+
+
+});
+
+
+
+
+
+
+/* SCROLL REVEAL */
+
+
+const revealItems = document.querySelectorAll(
+
+".vision-card, .card, .innovation-card, .lab-card, .command-card, .future-card, .project-card, .stat, .contact-card"
+
+);
+
+
+
+const observer = new IntersectionObserver((entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+
+}
+
+
+});
+
+
+},{
+
+threshold:.15
+
+});
+
+
+
+
+
+revealItems.forEach(item=>{
+
+
+item.style.opacity="0";
+
+item.style.transform="translateY(40px)";
+
+item.style.transition="all .8s ease";
+
+
+observer.observe(item);
+
+
+});
+
+
+
+
+
+
+/* HEADER CHANGE ON SCROLL */
+
+
+const header=document.querySelector(".header");
+
+
+window.addEventListener("scroll",()=>{
+
+
+if(window.scrollY>80){
+
+
+header.style.background="rgba(3,11,18,.96)";
+
+
+}
+
+else{
+
+
+header.style.background="rgba(7,21,33,.92)";
+
+
+}
+
+
+});
+
+
+
+
+
+/* CURRENT YEAR FOOTER */
+
+
+const year=document.querySelector(".copyright");
+
+
+if(year){
+
+
+year.innerHTML=
+
+"© "+new Date().getFullYear()+" ARKA NIROO - All Rights Reserved";
+
+
+}
 
 //==============================
 // پیام خوش آمد
