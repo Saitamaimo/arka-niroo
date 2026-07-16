@@ -3448,7 +3448,127 @@ grid-template-columns:1fr;
 .footer h2{
 
 font-size:28px;
+/* =====================
+CERTIFICATIONS + EQUIPMENT
+===================== */
 
+
+.certifications,
+.equipment{
+
+padding:120px 0;
+
+}
+
+
+
+.certificate-grid,
+.equipment-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+}
+
+
+
+.certificate-card,
+.equipment-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(0,217,255,.18);
+
+border-radius:25px;
+
+padding:25px;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+
+
+.certificate-card:hover,
+.equipment-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 45px rgba(0,217,255,.2);
+
+}
+
+
+
+.certificate-image,
+.equipment-image{
+
+height:260px;
+
+overflow:hidden;
+
+border-radius:18px;
+
+margin-bottom:20px;
+
+background:#fff;
+
+}
+
+
+
+.certificate-image img,
+.equipment-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+
+
+.certificate-card h3,
+.equipment-card h3{
+
+color:#00d9ff;
+
+font-size:22px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.certificate-card p,
+.equipment-card p{
+
+color:#d5e5f2;
+
+font-size:15px;
+
+}
+
+
+
+@media(max-width:900px){
+
+.certificate-grid,
+.equipment-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
 }
 
 
