@@ -556,6 +556,227 @@ if(input.value.trim()!=""){
 sendQuestion(input.value);
 
 input.value="";
+    /* =====================
+ARKA AI ASSISTANT V2
+===================== */
+
+
+function toggleChat(){
+
+const box=document.getElementById("chatBox");
+
+if(box.style.display==="block"){
+
+box.style.display="none";
+
+}
+
+else{
+
+box.style.display="block";
+
+}
+
+}
+
+
+
+
+
+function addMessage(sender,text){
+
+
+const body=document.getElementById("chatBody");
+
+
+body.innerHTML += `
+
+<div style="margin:12px 0">
+
+<b>${sender}</b>
+
+<br>
+
+<span>${text}</span>
+
+</div>
+
+`;
+
+
+
+body.scrollTop=body.scrollHeight;
+
+
+}
+
+
+
+
+
+function botReply(message){
+
+
+let text=message.toLowerCase();
+
+
+let answer="";
+
+
+
+if(text.includes("خط") || text.includes("hotline")){
+
+
+answer=
+
+"آرکا نیرو در زمینه عملیات خط گرم، تعمیرات و نگهداری شبکه‌های توزیع بدون خاموشی فعالیت می‌کند. تجهیزات عایقی، هات‌استیک و روش‌های ایمن عملیاتی استفاده می‌شوند.";
+
+
+}
+
+
+
+else if(text.includes("تجهیز") || text.includes("ابزار")){
+
+
+answer=
+
+"تجهیزات تخصصی شامل ابزار خط گرم، تجهیزات حفاظت فردی، خودروهای عملیاتی، بالابر، تجهیزات تست و ابزارهای کنترل شبکه است.";
+
+
+}
+
+
+
+else if(text.includes("هوش") || text.includes("ai")){
+
+
+answer=
+
+"ARKA AI برای تحلیل اطلاعات پروژه، مدیریت ریسک، گزارش‌گیری هوشمند و توسعه شبکه‌های برق هوشمند استفاده می‌شود.";
+
+
+}
+
+
+
+else if(text.includes("شبکه") || text.includes("توزیع")){
+
+
+answer=
+
+"خدمات شبکه شامل احداث، توسعه، اصلاح و نگهداری شبکه‌های فشار متوسط و فشار ضعیف می‌باشد.";
+
+
+}
+
+
+
+else if(text.includes("پست")){
+
+
+answer=
+
+"آرکا نیرو در طراحی، اجرا و توسعه پست‌های برق و زیرساخت‌های انرژی فعالیت دارد.";
+
+
+}
+
+
+
+else if(text.includes("گواهی") || text.includes("مدرک")){
+
+
+answer=
+
+"بخش Certification Center شامل گواهینامه‌ها، صلاحیت‌های تخصصی و استانداردهای شرکت خواهد بود.";
+
+
+}
+
+
+
+else if(text.includes("همکار") || text.includes("تماس")){
+
+
+answer=
+
+"برای شروع همکاری از بخش تماس سایت درخواست خود را ثبت کنید. تیم آرکا نیرو در سریع‌ترین زمان پاسخ خواهد داد.";
+
+
+}
+
+
+
+else{
+
+
+answer=
+
+"سؤال شما ثبت شد. لطفاً درباره خدمات برق قدرت، خط گرم، تجهیزات یا فناوری‌های آرکا نیرو سؤال کنید.";
+
+
+}
+
+
+
+
+setTimeout(()=>{
+
+
+addMessage(
+
+"🤖 ARKA AI:",
+
+answer
+
+);
+
+
+},700);
+
+
+
+}
+
+
+
+
+
+
+function sendMessage(){
+
+
+const input=document.getElementById("userInput");
+
+
+let msg=input.value.trim();
+
+
+
+if(msg==="") return;
+
+
+
+addMessage(
+
+"👤 شما:",
+
+msg
+
+);
+
+
+
+input.value="";
+
+
+
+botReply(msg);
+
+
+
+}
 
 }
 
