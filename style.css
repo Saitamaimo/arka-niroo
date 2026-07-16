@@ -1226,6 +1226,55 @@ gap:12px;
 }
 
 }
+.live-status{
+
+background:#081b2d;
+
+padding:25px 0;
+
+}
+
+.live-status .container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+}
+
+.status-item{
+
+background:#122c43;
+
+padding:18px;
+
+border-radius:12px;
+
+text-align:center;
+
+font-weight:700;
+
+}
+
+.dot{
+
+width:12px;
+
+height:12px;
+
+background:#00ff66;
+
+display:inline-block;
+
+border-radius:50%;
+
+margin-left:10px;
+
+box-shadow:0 0 12px #00ff66;
+
+}
 
 /* ===================================
 END
