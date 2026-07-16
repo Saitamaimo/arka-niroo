@@ -574,6 +574,16 @@ box.style.display="none";
 else{
 
 box.style.display="block";
+    if(!box.dataset.opened){
+
+addMessage(
+"🤖 ARKA AI:",
+"سلام 👋 من دستیار هوشمند آرکا نیرو هستم. درباره خدمات خط گرم، شبکه برق، تجهیزات، پروژه‌ها و همکاری سؤال کنید."
+);
+
+box.dataset.opened="true";
+
+    }
 
 }
 
