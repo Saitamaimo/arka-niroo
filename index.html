@@ -2064,10 +2064,12 @@ Power Engineering • AI • Smart Grid • Digital Twin
 ARKA AI CHATBOT
 ===================== -->
 
-<div class="chat-button" onclick="toggleChat()">
+<!-- =====================
+ARKA AI CHATBOT
+===================== -->
 
+<div class="chat-button" id="chatButton">
 🤖
-
 </div>
 
 
@@ -2076,9 +2078,11 @@ ARKA AI CHATBOT
 
 <div class="chat-header">
 
-ARKA AI Assistant ⚡
+ARKA AI
 
-<span onclick="toggleChat()">×</span>
+<span id="closeChat">
+×
+</span>
 
 </div>
 
@@ -2087,33 +2091,36 @@ ARKA AI Assistant ⚡
 <div class="chat-body" id="chatBody">
 
 <p>
-
-سلام 👋  
-من دستیار هوشمند آرکا نیرو هستم.  
-چگونه می‌توانم کمک کنم؟
-
+سلام 👋
+من دستیار هوشمند آرکا نیرو هستم.
+چطور می‌توانم کمک کنم؟
 </p>
 
 
-<button onclick="sendQuestion('خدمات خط گرم')">
-خدمات خط گرم
+</div>
+
+
+
+<div class="quick-buttons">
+
+<button onclick="quick('خط گرم')">
+⚡ خط گرم
 </button>
 
 
-<button onclick="sendQuestion('تجهیزات')">
-تجهیزات
+<button onclick="quick('خدمات')">
+🏗 خدمات
 </button>
 
 
-<button onclick="sendQuestion('همکاری')">
-شروع همکاری
+<button onclick="quick('تجهیزات')">
+🛠 تجهیزات
 </button>
 
 
-<button onclick="sendQuestion('گواهینامه ها')">
-گواهینامه‌ها
+<button onclick="quick('همکاری')">
+🤝 همکاری
 </button>
-
 
 </div>
 
@@ -2121,13 +2128,17 @@ ARKA AI Assistant ⚡
 
 <div class="chat-input">
 
-<input id="userInput" placeholder="پیام خود را بنویسید...">
+<input id="userInput" placeholder="پیام خود را بنویسید">
 
-<button onclick="sendMessage()">
 
+<button id="sendBtn">
 ارسال
-
 </button>
+
+</div>
+
+
+</div>
 
 </div>
 
