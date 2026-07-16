@@ -259,3 +259,66 @@ transform:scale(1.1);
 background:#ffb300;
 
 }
+//==============================
+// تغییر رنگ هدر هنگام اسکرول
+//==============================
+
+const header=document.querySelector(".header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>80){
+
+header.style.background="#05101d";
+
+header.style.boxShadow="0 10px 30px rgba(0,0,0,.45)";
+
+}else{
+
+header.style.background="rgba(8,25,42,.95)";
+
+header.style.boxShadow="none";
+
+}
+
+});
+
+//==============================
+// نمایش سال جاری
+//==============================
+
+const year=new Date().getFullYear();
+
+const copyright=document.querySelector(".copyright");
+
+if(copyright){
+
+copyright.innerHTML="© "+year+" ARKA NIROO | تمامی حقوق محفوظ است.";
+
+}
+
+//==============================
+// افکت Hover کارت ها
+//==============================
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-12px) scale(1.03)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0) scale(1)";
+
+});
+
+});
+
+//==============================
+// پیام خوش آمد
+//==============================
+
+console.log("ARKA NIROO Version 1.0 Loaded Successfully");
