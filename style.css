@@ -3570,13 +3570,18 @@ ARKA CHATBOT
 ===================== */
 
 
+/* =====================
+ARKA AI CHAT
+===================== */
+
+
 .chat-button{
 
 position:fixed;
 
-bottom:30px;
+right:25px;
 
-left:30px;
+bottom:25px;
 
 width:65px;
 
@@ -3600,10 +3605,6 @@ cursor:pointer;
 
 z-index:99999;
 
-box-shadow:
-
-0 0 25px rgba(0,217,255,.7);
-
 }
 
 
@@ -3612,29 +3613,23 @@ box-shadow:
 
 position:fixed;
 
-bottom:110px;
+right:25px;
 
-right:30px;
+bottom:100px;
 
 width:350px;
 
 background:#071521;
 
-border:
+border:1px solid #00d9ff;
 
-1px solid rgba(0,217,255,.3);
-
-border-radius:25px;
-
-overflow:hidden;
+border-radius:20px;
 
 display:none;
 
 z-index:99999;
 
-box-shadow:
-
-0 20px 50px rgba(0,0,0,.5);
+overflow:hidden;
 
 }
 
@@ -3646,7 +3641,7 @@ background:#00d9ff;
 
 color:#001018;
 
-padding:18px;
+padding:15px;
 
 font-weight:900;
 
@@ -3658,37 +3653,7 @@ justify-content:space-between;
 
 
 
-.chat-body{
-
-padding:20px;
-
-}
-
-
-
-.chat-body p{
-
-color:white;
-
-}
-
-
-
-.chat-body button{
-
-width:100%;
-
-margin:8px 0;
-
-padding:12px;
-
-border-radius:20px;
-
-border:1px solid #00d9ff;
-
-background:transparent;
-
-color:white;
+.chat-header span{
 
 cursor:pointer;
 
@@ -3696,11 +3661,41 @@ cursor:pointer;
 
 
 
-.chat-body button:hover{
+.chat-body{
 
-background:#00d9ff;
+height:250px;
 
-color:#001018;
+overflow:auto;
+
+padding:15px;
+
+}
+
+
+
+.quick-buttons{
+
+padding:10px;
+
+}
+
+
+
+.quick-buttons button{
+
+width:100%;
+
+margin:5px 0;
+
+padding:10px;
+
+border-radius:20px;
+
+background:#102532;
+
+color:white;
+
+border:1px solid #00d9ff;
 
 }
 
@@ -3710,9 +3705,9 @@ color:#001018;
 
 display:flex;
 
-padding:15px;
+gap:5px;
 
-gap:10px;
+padding:10px;
 
 }
 
@@ -3726,59 +3721,35 @@ border-radius:20px;
 
 padding:10px;
 
-border:0;
-
 }
 
 
 
-.chat-button{
-
-position:fixed;
-
-bottom:30px;
-
-right:30px;
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
+.chat-input button{
 
 background:#00d9ff;
 
-color:#001018;
+border:0;
 
-display:flex;
+border-radius:20px;
 
-align-items:center;
-
-justify-content:center;
-
-font-size:32px;
-
-cursor:pointer;
-
-z-index:99999;
-
-box-shadow:
-0 0 25px rgba(0,217,255,.7);
-
-}
+padding:10px;
 
 }
 
 
 
-@media(max-width:500px){
+@media(max-width:600px){
 
 .chat-box{
 
+right:5%;
+
 width:90%;
 
-left:5%;
+}
 
+}
 }
 
 }
