@@ -1218,3 +1218,62 @@ border-radius:50px;
 font-weight:bold;
 
 }
+.command-center{
+
+padding:120px 0;
+
+background:#07131e;
+
+}
+
+.command-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.command-card{
+
+background:#10263d;
+
+padding:40px;
+
+border-radius:20px;
+
+transition:.4s;
+
+text-align:center;
+
+border-top:4px solid #ff9800;
+
+}
+
+.command-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.command-card h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+color:#ff9800;
+
+}
+
+.command-card p{
+
+font-size:22px;
+
+}
