@@ -1057,6 +1057,37 @@ window.addEventListener("load", () => {
             `,
 
             "bot-message"
+            async function loadGallery() {
+
+    const response = await fetch("gallery.json");
+
+    const data = await response.json();
+
+    const container = document.getElementById("gallery");
+
+    container.innerHTML = "";
+
+    data.albums.forEach(album => {
+
+        container.innerHTML += `
+
+        <div class="album" onclick="openAlbum('${album.folder}')">
+
+            <img src="assets/images/gallery/${album.folder}/${album.cover}" alt="${album.title}">
+
+            <h3>${album.title}</h3>
+
+            <span>${album.images.length} تصویر</span>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+loadGallery();
 
         );
 
