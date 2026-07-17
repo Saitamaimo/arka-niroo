@@ -731,7 +731,31 @@ Web Platform
 <div id="albumViewer"></div>
 
     </div>
+function closeAlbum(){
 
+document.getElementById("albumModal").style.display="none";
+
+}
+    function showImage(src){
+
+document.getElementById("bigImage").src=src;
+
+document.getElementById("imageModal").style.display="flex";
+
+}
+
+function closeImage(){
+
+document.getElementById("imageModal").style.display="none";
+
+}
+    <div id="imageModal">
+
+<span onclick="closeImage()">✕</span>
+
+<img id="bigImage">
+
+    </div>
 </body>
 
 </html>
