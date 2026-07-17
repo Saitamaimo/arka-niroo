@@ -1,1 +1,116 @@
+[
+  {
+    "id":1,
+    "title":"تعویض سکسیونر به روش خط گرم",
+    "category":"Hot-Line",
+    "location":"تهران",
+    "cover":"assets/images/gallery/hotline/01.jpg",
+    "images":[
+      "assets/images/gallery/hotline/01.jpg",
+      "assets/images/gallery/hotline/02.jpg",
+      "assets/images/gallery/hotline/03.jpg"
+    ]
+  },
+
+  {
+    "id":2,
+    "title":"تعویض کات اوت فیوز",
+    "category":"Cutout Fuse",
+    "location":"تهران",
+    "cover":"assets/images/gallery/cutout-fuse/01.jpg",
+    "images":[
+      "assets/images/gallery/cutout-fuse/01.jpg",
+      "assets/images/gallery/cutout-fuse/02.jpg",
+      "assets/images/gallery/cutout-fuse/03.jpg"
+    ]
+  },
+
+  {
+    "id":3,
+    "title":"تعویض برقگیر",
+    "category":"Surge Arrester",
+    "location":"تهران",
+    "cover":"assets/images/gallery/surge-arrester/01.jpg",
+    "images":[
+      "assets/images/gallery/surge-arrester/01.jpg",
+      "assets/images/gallery/surge-arrester/02.jpg"
+    ]
+  },
+
+  {
+    "id":4,
+    "title":"کار با جمپر",
+    "category":"Jumper",
+    "location":"تهران",
+    "cover":"assets/images/gallery/jumper/01.jpg",
+    "images":[
+      "assets/images/gallery/jumper/01.jpg",
+      "assets/images/gallery/jumper/02.jpg"
+    ]
+  },
+
+  {
+    "id":5,
+    "title":"ابزار خط گرم",
+    "category":"Hot-Line Tools",
+    "location":"تهران",
+    "cover":"assets/images/gallery/hotline-tools/01.jpg",
+    "images":[
+      "assets/images/gallery/hotline-tools/01.jpg",
+      "assets/images/gallery/hotline-tools/02.jpg",
+      "assets/images/gallery/hotline-tools/03.jpg"
+    ]
+  },
+
+  {
+    "id":6,
+    "title":"تجهیزات حفاظت فردی",
+    "category":"PPE",
+    "location":"تهران",
+    "cover":"assets/images/gallery/ppe/01.jpg",
+    "images":[
+      "assets/images/gallery/ppe/01.jpg",
+      "assets/images/gallery/ppe/02.jpg"
+    ]
+  },
+
+  {
+    "id":7,
+    "title":"الفبای گره‌های نجات",
+    "category":"Rescue Knots",
+    "location":"آموزشی",
+    "cover":"assets/images/gallery/rescue-knots/01.jpg",
+    "images":[
+      "assets/images/gallery/rescue-knots/01.jpg",
+      "assets/images/gallery/rescue-knots/02.jpg",
+      "assets/images/gallery/rescue-knots/03.jpg"
+    ]
+  },
+
+  {
+    "id":8,
+    "title":"دوره آموزش خط گرم",
+    "category":"Training",
+    "location":"دانش صنعت پارس",
+    "cover":"assets/images/gallery/training/01.jpg",
+    "images":[
+      "assets/images/gallery/training/01.jpg",
+      "assets/images/gallery/training/02.jpg",
+      "assets/images/gallery/training/03.jpg"
+      {
+  "id":9,
+  "title":"نام آلبوم",
+  "category":"دسته",
+  "location":"محل اجرا",
+  "cover":"assets/images/gallery/folder/01.jpg",
+  "images":[
+    "assets/images/gallery/folder/01.jpg",
+    "assets/images/gallery/folder/02.jpg",
+    "assets/images/gallery/folder/03.jpg",
+    "assets/images/gallery/folder/04.jpg"
+  ]
+      }
+    ]
+  }
+]
 
