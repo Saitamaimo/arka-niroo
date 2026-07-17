@@ -1,1 +1,22 @@
 
+[
+  {
+    "id": 1,
+    "title": "Hot-Line Replacement",
+    "album": "hotline",
+    "category": "Live Line",
+    "image": "/images/hotline/001.jpg",
+    "thumbnail": "/images/hotline/thumbs/001.webp",
+    "description": "تعویض Cutout Fuse بدون خاموشی",
+    "voltage": "20kV",
+    "method": "Hot Stick",
+    "location": "Tehran",
+    "date": "2026-07-17",
+    "featured": true,
+    "tags": [
+      "HotLine",
+      "Cutout",
+      "20kV"
+    ]
+  }
+]
