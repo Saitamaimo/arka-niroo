@@ -1088,6 +1088,35 @@ window.addEventListener("load", () => {
 }
 
 loadGallery();
+        async function openAlbum(folder){
+
+const response=await fetch("gallery.json");
+
+const data=await response.json();
+
+const album=data.albums.find(a=>a.folder===folder);
+
+let html="";
+
+album.images.forEach(img=>{
+
+html+=`
+
+<div class="photo">
+
+<img src="assets/images/gallery/${folder}/${img}" onclick="showImage(this.src)">
+
+</div>
+
+`;
+
+});
+
+document.getElementById("albumViewer").innerHTML=html;
+
+document.getElementById("albumModal").style.display="flex";
+
+        }
 
         );
 
