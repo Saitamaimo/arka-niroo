@@ -716,6 +716,192 @@ if(e.key==="Enter"){
 
 sendBtn.click();
 
+    const chatButton =
+document.getElementById("chatButton");
+
+const chatBox =
+document.getElementById("chatBox");
+
+const closeChat =
+document.getElementById("closeChat");
+
+
+chatButton.onclick=()=>{
+
+chatBox.style.display="block";
+
+}
+
+
+
+closeChat.onclick=()=>{
+
+chatBox.style.display="none";
+
+}
+
+
+
+
+const input =
+document.getElementById("userInput");
+
+
+const send =
+document.getElementById("sendBtn");
+
+
+const body =
+document.getElementById("chatBody");
+
+
+
+
+
+function addMessage(text,type){
+
+let p=document.createElement("p");
+
+p.innerHTML=text;
+
+p.className=type;
+
+body.appendChild(p);
+
+body.scrollTop=body.scrollHeight;
+
+}
+
+
+
+
+
+function botAnswer(msg){
+
+
+msg=msg.toLowerCase();
+
+
+
+if(msg.includes("خط گرم")){
+
+return `⚡
+عملیات خط گرم آرکا نیرو شامل:
+<br>
+• تعمیرات شبکه بدون خاموشی
+<br>
+• کار با هات استیک
+<br>
+• تجهیزات عایقی استاندارد
+<br>
+• تیم متخصص اجرایی`;
+
+}
+
+
+
+if(msg.includes("خدمات")){
+
+
+return `🏗 خدمات آرکا نیرو:
+<br>
+• شبکه توزیع
+<br>
+• پست برق
+<br>
+• خط گرم
+<br>
+• انرژی خورشیدی
+<br>
+• هوشمندسازی شبکه`;
+
+}
+
+
+
+if(msg.includes("تجهیزات")){
+
+
+return `🛠 تجهیزات:
+<br>
+• بالابر خط گرم
+<br>
+• Hot Stick
+<br>
+• تجهیزات حفاظت فردی
+<br>
+• ابزار تست شبکه`;
+
+}
+
+
+
+
+if(msg.includes("همکاری")){
+
+
+return `🤝
+برای شروع همکاری با آرکا نیرو،
+لطفاً اطلاعات پروژه و حوزه فعالیت خود را ارسال کنید.`;
+
+}
+
+
+
+return `🤖
+سوال شما دریافت شد.
+کارشناسان آرکا نیرو آماده پاسخگویی هستند.
+`;
+
+}
+
+
+
+
+
+send.onclick=()=>{
+
+
+let text=input.value.trim();
+
+
+if(!text)return;
+
+
+
+addMessage(text,"user-msg");
+
+
+input.value="";
+
+
+
+setTimeout(()=>{
+
+
+let answer=botAnswer(text);
+
+
+addMessage(answer,"bot-msg");
+
+
+},700);
+
+
+
+}
+
+
+
+
+
+function quick(text){
+
+input.value=text;
+
+send.click();
+
+}
 }
 
 });
